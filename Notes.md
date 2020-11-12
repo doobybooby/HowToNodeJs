@@ -235,10 +235,10 @@ console.log(x(1,2));
 
 ```Node.js
 //Text we are going to use for the example
-=======================================
-||The fat cat ran down the street.    ||
-||It was searching for a mouse to eat.||
-=======================================
+==========================================
+|| The fat cat ran down the street.     ||
+|| It was searching for a mouse to eat. ||
+==========================================
 /at/g     //will highlight all the 'at' 
 /t/gi     //will highlight all the 't', 'T' 
 /e+/g     //will highlight all the 'e', 'ee', 'eee', 'ee...e' 
