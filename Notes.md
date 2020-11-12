@@ -154,7 +154,7 @@ var bmw = {
   "firstName": "Mini",
   "lastName": "Cooper"
 }
-
+```
 # Arrays
 ```Node.js
 //two ways to create an array
@@ -175,6 +175,42 @@ console.log(randomCarColors); //["white","blue"]
 // Arrays are zero index based: 
 console.log(randomCarColors[0]); //["White"]
 
+var arr = [1,2,3];//[1,2,3]
+arr[arr.length] = 50; //[1,2,3,50]
+arr[5] = 60;          //[1,2,3,,50,60]
 
+//to delete you can use splice to specify the starting index and number of items to delete
+arr.splice(2,3);[1,2,60]
 
+//to insert and delete elements at the end of the array use 'push("")' and 'pop()'
+//to insert and delete elements at the front of the array use 'unhift("")' and 'shift()'
+//to return string from the array '.join()'
+//to sort 'sort()'
+//to iterate items in arrays, we can use the for loop or 'forEach()'
+```
+
+# Functions
+* functions always return a value, if not explicit, it returns undefined
+* anonymous functions - nameless functions
+```
+function functionName(){
+  //function body;
+  //optional return;
+}
+
+function greet(name){
+  console.log("Greetings, " + name);
+}
+greet(); //Greetings, undefined
+greet("John"); //Greetings, John
+greet("John", "Bob", "Alex"); //Greetings, John
+
+//nameless functions
+var x = function(a,b){
+  return a+b;
+}
+console.log(x(1,2));
+```
+
+# Regular Expression
  
