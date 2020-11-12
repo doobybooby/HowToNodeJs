@@ -192,7 +192,7 @@ arr.splice(2,3);[1,2,60]
 # Functions
 * functions always return a value, if not explicit, it returns undefined
 * anonymous functions - nameless functions
-```
+```Node.js
 function functionName(){
   //function body;
   //optional return;
@@ -213,4 +213,43 @@ console.log(x(1,2));
 ```
 
 # Regular Expression
- 
+* RegExp obj is used for matching text with pattern
+* commonly used to validate text, and search through text
+* regular expression literal consists of a pattern enclosed between /slashes/
+* followed by the /slash/ will be a flag variable(s).
+* Flag variable 'g' - global
+* Flag variable 'i' - case insensitive
+* Flag variable 'm' - multiline
+* Flag variable 's' - single line(dotall)
+* Flag variable 'u' - unicode
+* Flag variable 'y' - sticky
+
+* Token '+' - one or more
+* Token '?' - optional 
+* Token '*' - zero or more (combination of + and ?)
+* Token '.' - it matches anything all, except a new line
+* Token '\' - cancel anything/escapes. Or simply treat it as normal. 
+* Token '\w' - matches all the words // has negation '\W'
+* Token '\s' - matches all the white space // has negation '\S'
+* Token '\w{x,y}' - x = minium chars in the word, y = maximum chars in the word
+
+```Node.js
+//Text we are going to use for the example
+=======================================
+||The fat cat ran down the street.    ||
+||It was searching for a mouse to eat.||
+=======================================
+/at/g     //will highlight all the 'at' 
+/t/gi     //will highlight all the 't', 'T' 
+/e+/g     //will highlight all the 'e', 'ee', 'eee', 'ee...e' 
+/e+a?/g   //will highlight all the 'e', 'e...e', 'ea', 'e...ea' 
+/at*n*/g  //will highlight all the 'a', 'at', 'at...t', 'an', 'an...n'
+/a./g     //will highlight all the 'aa', 'ab', 'ac', 'a.' and a followed by anything
+/\./      //Will highlight all the '.' //backslash allows you to print all the special characters
+/\w/      //Will highlight all the words (words and numbers)
+/\W/      //Will highlihgt all the not words (white spaces and symbols)
+/\s/      //Will highlight all the white space (no symbols)
+/\S/      //Will highlight all the not white spaces (words and symbols)
+/\w{3,5}/ //Will highlight all the words with lenght 3 to 5.
+```
+# Character grouping
