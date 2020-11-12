@@ -105,7 +105,7 @@ console.log(s1); // rl
 var s2 = "a,b,c,d,e".split(",");//['a','b','c','d','e']
 ```
 
-# Objects
+# Object Literal Notation
 ```Node.js
 //two ways to create objects
 var o1 = new Object();
@@ -142,5 +142,39 @@ console.log(car);
 ```
 
 # JSON - JavaScript Object Notation 
+* Wrapping String in double quote is mandatory!
+```Node.js
+//This is VALID Object Literal Notation, but INVALID JASON:
+var sudan = {
+  "firstName": 'Honda', //JSON string require, "Honda"
+  lastName: "Civic"      //Must wrap property name for JSON "lastName"
+}
+//This is a VALID JSON notation
+var bmw = {
+  "firstName": "Mini",
+  "lastName": "Cooper"
+}
+
+# Arrays
+```Node.js
+//two ways to create an array
+var arr1 = new Array();
+var arr2 = []; //preferred
+
+//check if a var is an array
+Array.isArray(arr2); //true
+
+
+var randomCarColors = []; 
+randomCarColors.push("blue"); // add at the end 
+console.log(randomCarColors); //["blue"] 
+
+randomCarColors.unshift("white"); // add to the front
+console.log(randomCarColors); //["white","blue"] 
+
+// Arrays are zero index based: 
+console.log(randomCarColors[0]); //["White"]
+
+
 
  
