@@ -253,3 +253,20 @@ console.log(x(1,2));
 /\w{3,5}/ //Will highlight all the words with lenght 3 to 5.
 ```
 # Character grouping
+* [] is used for range
+* () is used for grouping
+```Node.js
+//Text we are going to use for the example
+================================
+|| at aat bat cat dat Eat Fat ||
+|| beat seat meat that Brat   ||
+|| 111 112 122 1at 2at 3at    ||
+================================
+
+/[a-d]at/g     //Will highlight 'aat','bat','cat'
+/[12]at/g      //WIll highlight '1at','2at'
+/[A-Z]at/g     //Will highlight 'Eat','Fat'
+/(e|E)at/g     //Will highlight 'Eat',b'eat', s'eat', m'eat'
+/(c|a|d){2,3}  //Will highlihght (2-3 char words that include (c or a or d) "'aa't", "'ca't," "'da't"
+
+
