@@ -232,6 +232,9 @@ console.log(x(1,2));
 * Token '\w' - matches all the words // has negation '\W'
 * Token '\s' - matches all the white space // has negation '\S'
 * Token '\w{x,y}' - x = minium chars in the word, y = maximum chars in the word
+* Token '^' - match at the beginning of the statement
+* Token '$' - match at the end of the statement
+
 
 ```Node.js
 //Text we are going to use for the example
@@ -255,6 +258,7 @@ console.log(x(1,2));
 # Character grouping
 * [] is used for range
 * () is used for grouping
+
 ```Node.js
 //Text we are going to use for the example
 ================================
@@ -268,5 +272,21 @@ console.log(x(1,2));
 /[A-Z]at/g     //Will highlight 'Eat','Fat'
 /(e|E)at/g     //Will highlight 'Eat',b'eat', s'eat', m'eat'
 /(c|a|d){2,3}  //Will highlihght (2-3 char words that include (c or a or d) "'aa't", "'ca't," "'da't"
+```
+* Allow you to look at things that either happend before or after the thing you want to capture. Doesn't actually capture.
+* positive look behind - (?<=) // look behind to see if there is a match
+* negative look behind - (?<!) // anything that doesn't have the match before it
+* positive look ahead - (?=) // highlight anything that is followed by (?=_)
+* negative look ahead - (?;) // everything now followed by (?=_)
+```Node.js
+(?<=[a]t). //return after 'at'
+(?<;[a]t). //return 
+```
+
+# Digits
+* use '\d' to grab digits
+* use '\d{x}' to grab 'x' number of digits
+
+
 
 
